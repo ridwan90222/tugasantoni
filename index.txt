@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apotek TASUM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header> MENU</header>
+        <ul>
+            <li><a> login dan daftar untuk pengunjung </a></li>
+            <li><a href="pagemember.php">daftar member</a></li>
+            <li><a href="formdaftar.php">member masuk</a></li>
+        </ul>
+    </nav>
+
+    </body>
+</html>

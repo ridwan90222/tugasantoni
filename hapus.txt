@@ -1,0 +1,25 @@
+<?php
+
+include("koneksi.php");
+
+if( isset($_GET['ID']) ){
+
+
+    $ID = $_GET['ID'];
+
+
+    $sql = "DELETE FROM recep WHERE ID=$ID";
+    $query = mysqli_query($db, $sql);
+
+
+    if( $query ){
+        header('Location: formdaftar.php');
+    } else {
+        die("gagal menghapus...");
+    }
+
+} else {
+    die("akses dilarang...");
+}
+
+?>

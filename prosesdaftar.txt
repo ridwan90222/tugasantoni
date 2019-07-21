@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Pemesanan Obat Apotek TASUM</title>
+</head>
+
+<body>
+    <header>
+        <h3>Formulir Pendaftaran member baru</h3>
+    </header>
+
+    <form action="prosesdaftar.php" method="POST">
+
+        <fieldset>
+
+        <p>
+            <label for="ID">ID :</label>
+
+            <input type="text"  name="ID"
+            required placeholder="Format: 123-456">
+        </p>
+        <p>
+            <label for="Nama">Nama: </label>
+            <input type="text" name="Nama" placeholder="Nama Lengkap" required />
+        </p>
+        <p>
+            <label for="Umur">Umur:</label>
+
+            <input type="number"  name="Umur"
+            required placeholder="Format: 31">
+        </p>
+        <p>
+            <label for="Obat">Masukkan nama Obat yang Diinginkan ;</label>
+            <input type="text" name="Obat" placeholder="Masukan nama Obat" required>
+        </p>
+        <p>
+              <label for="Harga">Harga Obat : </label>
+            <input type="number" name="Harga" placeholder="" required>
+
+        </p>
+        <p>
+            <input type="submit" value="Daftar" name="daftar" />
+        </p>
+        <p><a href="member_page.php" target="_blank"> kembali </a></p>
+
+        </fieldset>
+
+    </form>
+<?php if(isset($_GET['status'])): ?>
+    <p>
+        <?php
+            if($_GET['status'] == 'sukses'){
+                echo "Pendaftaran Pelanggan berhasil!";
+            } else {
+                echo "Pendaftaran gagal!";
+            }
+        ?>
+    </p>
+<?php endif; ?>
+    </body>
+</html>
